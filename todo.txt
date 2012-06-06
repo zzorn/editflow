@@ -1,0 +1,65 @@
+TODO
+
+
+Documents
+* Document / module
+* Component
+* Property
+  * Component valued
+  * Numerical
+  * Function
+  * String
+  * Boolean
+  * Enum
+
+
+Config storage
+* Load settings
+* Save changed settings
+
+
+Multi-document
+* Multiple documents open, show as tabs (or list or other way)
+* Remember changed docs, track need to save
+* Autosave functionality
+* Provide save & load actions
+* Most recently opened files
+
+
+Actions
+* Show in menu
+* Show in toolbars
+* Show in contest menus for document/module, component, property
+* Document specific undo-stack
+
+
+Property editor
+* Checkbox
+* Combo box (enum) (or expand to list of radio buttons if space?)
+* String
+*
+
+
+
+Component tree structure
+
+
+Component library
+
+
+Property grid
+* Components on rows, properties in columns
+* Optionally filtering and group-by
+
+
+(Preview window)
+
+
+
+
+
+
+
+
+
+
