@@ -1,7 +1,7 @@
 package org.editflow.utils
 
 import java.awt.BorderLayout
-import javax.swing.{JSplitPane, JPanel, JComponent}
+import javax.swing.{BorderFactory, JSplitPane, JPanel, JComponent}
 
 
 /**
@@ -45,6 +45,8 @@ class DockPanel {
 
       //split.setOneTouchExpandable(true)
       split.setContinuousLayout(continuousResize)
+
+      split.setBorder(BorderFactory.createEmptyBorder())
 
       component
     }

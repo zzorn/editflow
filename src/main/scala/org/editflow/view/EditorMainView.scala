@@ -4,6 +4,7 @@ import javax.swing._
 import java.awt._
 import org.editflow.EditorContext
 import org.editflow.utils._
+import java.awt.event.ActionEvent
 
 /**
  *
@@ -57,7 +58,15 @@ class EditorMainView(context: EditorContext) extends MainView {
   }
 
   protected def createToolbar(): JComponent = {
-    new JPanel()
+    val toolbar: JToolBar = new JToolBar()
+    toolbar.setFloatable(false)
+    toolbar.add(new AbstractAction("Exit") {
+      def actionPerformed(e: ActionEvent) {
+        System.exit(1)
+      }
+    })
+
+    toolbar
   }
 
 

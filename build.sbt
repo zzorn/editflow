@@ -20,3 +20,6 @@ libraryDependencies += "log4j" % "log4j" % "1.2.16"
 libraryDependencies += "org.yaml" % "snakeyaml" % "1.11-SNAPSHOT"
 
 
+libraryDependencies += "com.miglayout" % "miglayout-core" % "4.2"
+
+libraryDependencies += "com.miglayout" % "miglayout-swing" % "4.2"

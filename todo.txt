@@ -12,6 +12,13 @@ Documents
   * Boolean
   * Enum
 
+* Document object
+  * May have properties
+  * May have subcomponent properties
+  * Properties may be list type
+
+
+
 
 Config storage
 * Load settings
