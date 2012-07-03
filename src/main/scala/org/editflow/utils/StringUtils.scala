@@ -5,6 +5,18 @@ package org.editflow.utils
  */
 object StringUtils {
 
+  def getBefore(s: String, separator: String): String = {
+    val i = s.indexOf(separator)
+    if (i < 0) s
+    else s.substring(0, i)
+  }
+
+  def getAfter(s: String, separator: String): String = {
+    val i = s.indexOf(separator)
+    if (i < 0) ""
+    else s.substring(i + separator.length, s.length)
+  }
+
 
   /**
    * Adds a prefix, capitalizing the body, except if the prefix if empty, in which case the body is returned as-is.

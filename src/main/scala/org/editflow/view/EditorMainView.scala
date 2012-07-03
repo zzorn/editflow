@@ -29,16 +29,17 @@ class EditorMainView(context: EditorContext) extends MainView {
     val toolBar = createToolbar()
 
     val library = context.libraryView.component
+    val beanView = context.beanView.component
 
     mainPanel.add(toolBar, BorderLayout.NORTH)
     mainPanel.add(dockPanel.component, BorderLayout.CENTER)
 
     frame = new SimpleFrame(context.applicationName, mainPanel, menuBar, 0.8)
 
-    dockPanel.addPanel(new JPanel())
-    dockPanel.addPanel(library, LeftSide, 200, 0.2)
-    dockPanel.addPanel(new JLabel("foo"), TopSide, 100, 0)
-    dockPanel.addPanel(new JLabel("bar"), RightSide, 500, 0.5, true)
+    dockPanel.addPanel(new JPanel(), continuousResize = true)
+    dockPanel.addPanel(library, LeftSide, 200, 0.2, continuousResize = true)
+    dockPanel.addPanel(new JLabel("foo"), TopSide, 100, 0, continuousResize = true)
+    dockPanel.addPanel(beanView, RightSide, 500, 0.5, continuousResize = true)
     frame.pack()
   }
 

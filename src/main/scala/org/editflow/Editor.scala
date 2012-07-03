@@ -5,7 +5,7 @@ import view.EditorMainView
 /**
  *
  */
-class Editor(context: EditorContext) {
+class Editor(val context: EditorContext) {
 
   def main(args: Array[String]) {
     context.mainView.start()

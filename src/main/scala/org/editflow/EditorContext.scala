@@ -1,6 +1,8 @@
 package org.editflow
 
-import view.{MainView, View}
+import propertyaccess.{PropertyExtractor, Property}
+import view.property.{BeanView, EditorFactory}
+import view.{LibraryView, MainView, View}
 
 
 /**
@@ -9,10 +11,17 @@ import view.{MainView, View}
 trait EditorContext {
 
   def applicationName: String
+
   def useLightweightComponents: Boolean
 
   def mainView: MainView
 
-  def libraryView: View
+  def libraryView: LibraryView
+
+  def beanView: BeanView
+
+  def propertyExtractor: PropertyExtractor
+
+  def editorFactory: EditorFactory
 
 }

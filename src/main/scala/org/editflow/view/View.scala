@@ -1,6 +1,5 @@
 package org.editflow.view
 
-import org.editflow.document.Doc
 import javax.swing.{JScrollPane, JComponent}
 
 /**
@@ -8,16 +7,13 @@ import javax.swing.{JScrollPane, JComponent}
  */
 trait View {
 
-  type D <: Doc
-  type C <: JComponent
-
-  private var _doc: D = null.asInstanceOf[D]
-  private var _component: C = null.asInstanceOf[C]
+  private var _doc: AnyRef = null
+  private var _component: JComponent = null
   private var viewComp: JComponent = null
 
-  final def doc: D = _doc
+  final def doc: AnyRef = _doc
 
-  final def setDoc(doc: D) {
+  final def setDoc(doc: AnyRef) {
     _doc = doc
     if (_component != null) updateUi(_doc, _component)
   }
@@ -33,9 +29,9 @@ trait View {
     viewComp
   }
 
-  protected def createComponent(): C
+  protected def createComponent(): JComponent
 
-  protected def updateUi(doc: D, component: C) {}
+  protected def updateUi(doc: AnyRef, component: JComponent) {}
 
   protected def wrapInScrollPane = true
 
