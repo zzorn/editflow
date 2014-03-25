@@ -1,11 +1,11 @@
-package org.editflow.ui;
+package org.editflow.editors;
 
 import javax.swing.*;
 
 /**
- *
+ * Editor for a bean.
  */
-public interface Editor {
+public interface BeanEditor {
 
     /**
      * @return swing ui component with the editor.
