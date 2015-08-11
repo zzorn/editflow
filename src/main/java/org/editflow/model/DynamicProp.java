@@ -1,6 +1,5 @@
 package org.editflow.model;
 
-import com.sun.xml.internal.bind.v2.model.core.PropertyInfo;
 import org.flowutils.Check;
 
 /**

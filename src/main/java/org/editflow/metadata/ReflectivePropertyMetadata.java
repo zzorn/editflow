@@ -37,7 +37,7 @@ public final class ReflectivePropertyMetadata extends NameAndDescriptionBase imp
         propertyType = getter.getReturnType();
 
         // Get name and description, if annotated
-        extractNameAndDescriptionFromAnnotation(getter.getAnnotation(Editable.class), propertyId.getName());
+        extractNameAndDescriptionFromAnnotation(getter.getAnnotation(Editable.class), propertyId.toString());
 
         this.hostClass = hostClass;
         this.getter = getter;
@@ -61,7 +61,7 @@ public final class ReflectivePropertyMetadata extends NameAndDescriptionBase imp
     }
 
     private Method findSetter(Class hostClass, Symbol propertyId, Class propertyType) {
-        String setterName = "set" + propertyId.getName();
+        String setterName = "set" + propertyId;
 
         try {
             final Method method = hostClass.getMethod(setterName, propertyType);

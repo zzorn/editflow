@@ -1,7 +1,7 @@
 package org.editflow;
 
 
-import org.flowutils.SimpleFrame;
+import org.uiflow.desktop.ui.SimpleFrame;
 
 /**
  *
