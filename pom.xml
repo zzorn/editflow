@@ -19,6 +19,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <kotlin.version>1.0.0-beta-3595</kotlin.version>
     </properties>
 
 
@@ -37,11 +38,18 @@
             <version>1.7.6</version>
         </dependency>
 
+        <!-- Kotlin standard library -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+
         <!-- Utility library -->
         <dependency>
             <groupId>org.flowutils</groupId>
             <artifactId>flowutils</artifactId>
-            <version>0.1.87</version>
+            <version>0.2.6</version>
         </dependency>
 
         <!-- Some swing utilities -->
